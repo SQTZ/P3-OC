@@ -6,9 +6,21 @@
     --font-paragraph: 'Roboto', sans-serif;
 }
 
+@keyframes loader {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+
 body {
     margin: 0;
     background-color: white;
+    animation-name: loader;
+    animation-duration: 3s;
 }
 
 * {
@@ -118,7 +130,7 @@ main .g-menu .title {
 .case h4 {
     position: absolute;
     right: 17.55px;
-    top: 20.99px;
+    top: 36px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
