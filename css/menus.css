@@ -86,6 +86,8 @@ main .g-menu .title {
     position: relative;
     top: -1px;
     z-index: 10;
+    animation-name: loader;
+    animation-duration: 0.5s;
 }
 
 .g-menu .parts h3 {
@@ -100,6 +102,31 @@ main .g-menu .title {
     flex-direction: column;
     gap: 10px;
     margin-bottom: 50px;
+}
+
+@keyframes loader-test {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+
+#anim1 {
+    animation-name: loader;
+    animation-duration: 5s;
+}
+
+#anim2 {
+    animation-name: loader-test;
+    animation-duration: 10s;
+}
+
+#anim3 {
+    animation-name: loader-test;
+    animation-duration: 15s;
 }
 
 .case {
@@ -163,28 +190,26 @@ main .g-menu .title {
 .validate:hover {
     cursor: pointer;
     z-index: 10;
-    animation-name: validation;
-    animation-duration: 1s;
+    animation: validation 0.5s ease-out forwards;
 }
 .validate2:hover {
     z-index: 10;
-    animation-name: validation;
-    animation-duration: 1s;
+    animation: validation 0.5s ease-out forwards;
 }
 .validprice {
     width: 150%;
 }
 
 @keyframes validation {
-    from {
-        transform: translateX(5px);
+    0% {
+        transform: translateX(100%); /* Commence à gauche, en dehors du cadre */
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0); /* Fini à sa position normale dans le cadre */
         opacity: 1;
-    }
-    to {
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
+      }
+  }
 
 main button {
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
