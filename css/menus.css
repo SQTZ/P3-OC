@@ -202,11 +202,11 @@ main .g-menu .title {
 
 @keyframes validation {
     0% {
-        transform: translateX(100%); /* Commence à gauche, en dehors du cadre */
+        transform: translateX(100%); 
         opacity: 0;
       }
       100% {
-        transform: translateX(0); /* Fini à sa position normale dans le cadre */
+        transform: translateX(0);
         opacity: 1;
       }
   }
